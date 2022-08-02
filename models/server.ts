@@ -11,6 +11,7 @@ import brandRoutes from '../routes/brand.routes';
 import searchRoutes from '../routes/search.routes';
 import db from '../database/connection';
 import '../database/asociations';
+import path from 'path';
 
 class Server {
     private app: Application;
@@ -85,6 +86,11 @@ class Server {
         this.app.use(this.apiPath.products, productRoutes);
         this.app.use(this.apiPath.brands, brandRoutes);
         this.app.use(this.apiPath.search, searchRoutes);
+        this.app.get('/*', function (req, res) {
+            res.sendFile('index.html', {
+                root: path.join(__dirname, '../../public'),
+            });
+        });
     }
 }
 
