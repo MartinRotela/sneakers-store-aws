@@ -14,6 +14,10 @@ The whole app is hosted by AWS Beanstalk
 
 Link: http://sneakers-store-aws.us-east-1.elasticbeanstalk.com/
 
+Login admin: username: testadmin@gmail.com password: testadmin
+
+Login Sales: username: testsales@gmail.com password: testsales
+
 Docs: https://documenter.getpostman.com/view/20307164/UzkV1bm
 
 To run this app locally you should download this repo, install all packages using 'npm install' script. then you should use 'npm start'.
